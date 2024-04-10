@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    $viewData = [];
+    $viewData["title"] = "Home Page - Tienda Online";
+    return view('home.index')->with("viewData", $viewData);
 });
 
 Route::get('/productos', function () {
     return view('productos');
 });
+
+Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.about");
