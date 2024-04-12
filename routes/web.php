@@ -20,8 +20,13 @@ Route::get('/', function () {
     return view('home.index')->with("viewData", $viewData);
 });
 
-Route::get('/productos', function () {
-    return view('productos');
-});
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index");
 
 Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.about");
+
+// Route::get('/products', 'ProductController@index')->name("product.index");
+
+Route::get('/products', 'App\Http\Controllers\ProductController@index')->name("product.index");
+
+
+Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')->name("product.show");
