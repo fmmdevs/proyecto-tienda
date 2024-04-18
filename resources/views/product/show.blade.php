@@ -7,7 +7,7 @@
     <div class="row g-0">
         <div class="col-md-4">
             @if(isset($viewData['product']['image']))
-            <img src="{{ asset('/img/'.$viewData['product']->getImage()) }}" class="img-fluid rounded-start">
+            <img src="{{ asset('/storage/'.$viewData['product']->getImage()) }}" class="img-fluid rounded-start">
             @endif
         </div>
         <div class="col-md-8">
