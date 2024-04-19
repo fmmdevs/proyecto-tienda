@@ -54,5 +54,3 @@ Route::put('/admin/products/{id}/update', '\App\Http\Controllers\Admin\AdminProd
     ->name("admin.product.update");
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
