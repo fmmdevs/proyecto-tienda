@@ -18,6 +18,7 @@ return new class extends Migration
             // Decimal con 6 digitos, 2 decimales, true: sin signo
             $table->decimal('price', 6, 2, true);
             $table->unsignedBigInteger('order_id');
+            // Revisar cascades
             $table->foreign('order_id')->references('id')->on('orders')->onUpdate('cascade')->onDelete('cascade');
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products')->onUpdate('cascade')->onDelete('cascade');

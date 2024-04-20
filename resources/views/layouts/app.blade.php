@@ -32,7 +32,9 @@
                         <a role="button" class="nav-link active" onclick="document.getElementById('logout').submit();">Logout</a>
                         @csrf
                     </form>
+                    @if(session("isAdmin"))
                     <a class="nav-link active" href="{{ route('admin.home.index') }}">Admin</a>
+                    @endif
                     @endguest
 
 
