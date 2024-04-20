@@ -35,7 +35,7 @@ class AdminProductController extends Controller
             Storage::disk('public')->put($imageName, file_get_contents($request->file('image')->getRealPath()));
             $newProduct->setImage($imageName);
         } else {
-            $newProduct->setImage("europe-trees.jpeg");
+            $newProduct->setImage("default.jpeg");
         }
 
         $newProduct->save();

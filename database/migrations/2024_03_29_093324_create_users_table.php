@@ -18,7 +18,7 @@ return new class extends Migration
             // $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('role')->default('client');
-            $table->integer('balance')->default(0);
+            $table->decimal('balance', 16, 2, true)->default(0);
             // $table->rememberToken();
             $table->timestamps();
         });

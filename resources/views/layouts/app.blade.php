@@ -21,6 +21,7 @@
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" href="{{ route('home.index') }}">Home</a>
                     <a class="nav-link active" href="{{ route('product.index') }}">Products</a>
+                    <a class="nav-link active" href="{{ route('cart.index') }}">Cart</a>
                     <a class="nav-link active" href="{{ route('home.about') }}">About</a>
                     <div class="vr bg-white mx-2 d-none d-lg-block"></div>
                     @guest
@@ -31,7 +32,10 @@
                         <a role="button" class="nav-link active" onclick="document.getElementById('logout').submit();">Logout</a>
                         @csrf
                     </form>
+                    <a class="nav-link active" href="{{ route('admin.home.index') }}">Admin</a>
                     @endguest
+
+
                 </div>
             </div>
         </div>
