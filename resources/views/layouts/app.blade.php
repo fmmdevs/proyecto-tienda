@@ -32,11 +32,11 @@
                         <a role="button" class="nav-link active" onclick="document.getElementById('logout').submit();">Logout</a>
                         @csrf
                     </form>
-                    @if(session("isAdmin"))
+                    @endguest
+                    <!-- Para que aparezca admin en el nav solo cuando el usuario este autenticado y sea admin -->
+                    @if(auth()->user() && auth()->user()->getRole() == 'admin')
                     <a class="nav-link active" href="{{ route('admin.home.index') }}">Admin</a>
                     @endif
-                    @endguest
-
 
                 </div>
             </div>
