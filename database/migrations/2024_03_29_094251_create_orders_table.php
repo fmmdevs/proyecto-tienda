@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->decimal('total', 12, 2, true);
+            $table->decimal('total', 16, 2, true);
             // Clave ajena, cuando declaramos id es de tipo unsignedBigInteger
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');

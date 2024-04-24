@@ -43,6 +43,7 @@ Route::post('/cart/add/{id}', 'App\Http\Controllers\CartController@add')->name("
 // Middleware auth: ruta solo disponible para usuarios autenticados
 Route::middleware('auth')->group(function () {
     Route::get('/cart/purchase', 'App\Http\Controllers\CartController@purchase')->name("cart.purchase");
+    Route::get('/my-account/orders', 'App\Http\Controllers\MyAccountController@orders')->name("myaccount.orders");
 });
 // Middleware admin: routa solo disponible para usuarios cuyo rol sea admin
 Route::middleware('admin')->group(function () {
